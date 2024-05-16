@@ -1,0 +1,152 @@
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.center{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#fadeElement{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    background-color: rgb(0, 0, 0, 1);
+    z-index: 1000;
+    transition: opacity 1s ease;
+    pointer-events: none;
+}
+
+.topFade{
+    width: 100%;
+    position: fixed;
+    height: 20vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent);
+    z-index: 10;
+    pointer-events: none;
+}
+
+.bottomFade{
+    width: 100%;
+    position: fixed;
+    height: 10vh;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+    z-index: 10;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.containerBottomBorder{
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    box-shadow: 0 0 10px 5px #b73a39;
+    z-index: 4;
+}
+
+.title{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 60px;
+    cursor: default;
+}
+
+#watermarkLogo{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('ElevatedDetailWatermark.PNG');
+    width: 130px;
+    height: 130px;
+    border-radius: 130px;
+    position: fixed;
+    z-index: 5;
+    bottom: 0;
+    right: 0;
+    border: 1px solid #b73a39;
+    margin: 30px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    cursor: pointer;
+}
+
+.header1{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 40px;
+    cursor: default;
+}
+
+.header2{
+    color: #b73a39;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.header3{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 40px;
+    cursor: default;
+    margin-top: 50px;
+}
+
+.text1{
+    color: white;
+    margin-top: 20px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text2{
+    color: #b73a39;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.text3{
+    color: #b73a39;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+#loadingIndicator {
+    position: fixed;
+    background-color: grey;
+    padding: 20px;
+    font-size: 20px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    z-index: 2000;
+    display: none;
+}
+
+#loadingCover{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color: rgb(0, 0, 0, 0.4);
+    z-index: 2000;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+@media only screen and (max-width: 1100px){
+    #watermarkLogo{
+        width: 100px;
+        height: 100px;
+    }
+}

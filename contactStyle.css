@@ -1,0 +1,173 @@
+.contactContainer{
+    height: 115vh;
+    background-image: url('contactBackgroundImg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.aboutTopFade{
+    width: 100%;
+    height: 20vh;
+    position: absolute;
+    z-index: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent);
+    pointer-events: none;
+}
+
+.contactContentContainer{
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    margin: 30px 25px 100px 25px;
+}
+
+.contactTitle{
+    margin-top: 40px;
+}
+
+.contactInfoSplitContainer{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.ContactSplitbox{
+    background-color: rgb(255, 255, 255, 0.95);
+    border-radius: 20px;
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid #b73a39;
+    padding: 30px;
+    margin: 100px 30px 30px 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.phoneLogo{
+    background-image: url('phoneIcon.png');
+}
+
+.emailLogo{
+    background-image: url('emailIcon.png');
+}
+
+.contactLogoImg{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.phoneNumberText{
+    margin-top: 50px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.contactButton{
+    background-color: #b73a39;
+    color: white;
+    padding: 5px 10px;
+    font-size: 25px;
+    border-radius: 40px;
+    opacity: 1;
+    margin-top: 0px;
+    width: fit-content;
+    margin: 10px auto 0 auto;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.contactButton:hover{
+    background-color: #989898ff;
+}
+
+#emailNowButton{
+    margin-top: 10px;
+}
+
+.emailText{
+    margin-top: 100px;
+}
+
+.contactSocailMediaContainer{
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 10;
+    margin-top: 50px;
+}
+
+.InstaLogo{
+    background-image: url('instaLogo.PNG');
+}
+
+.FacebookLogo{
+    background-image: url('fblogo.png');
+}
+
+.XLogo{
+    background-image: url('xlogo.png');
+}
+
+.YoutubeLogo{
+    background-image: url('ytLogo.png');
+}
+
+.TikTokLogo{
+    background-image: url('tiktoklogo.png');
+}
+
+.socailogo{
+    width: 200px;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1100px){
+    .contactInfoSplitContainer{
+        display: block;
+    }
+    .ContactSplitbox{
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 300px;
+        width: 100%;
+    }
+    .contactContentContainer{
+        margin: 0;
+    }
+    #emailNowButton{
+        margin-top: 30px;
+    }
+    .phoneNumberText{
+        margin-top: 20px;
+        font-size: 25px;
+    }
+    .contactLogoImg{
+        width: 50px;
+        height: 50px;
+    }
+    .contactButton{
+        font-size: 20px;
+    }
+    .emailText{
+        font-size: 20px;
+    }
+
+    .ContactSplitbox{
+        margin-top: 30px;
+    }
+    .contactContainer{
+        height: 120vh;
+    }
+}
+
+@media only screen and (max-height: 900px){
+    .contactContainer{
+        height: 150vh;
+    }
+}

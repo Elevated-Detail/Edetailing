@@ -1,0 +1,341 @@
+<!---- API - Formspree  ----->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="orderStyle.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="loadingIndicator">Loading...</div>
+    <div id="loadingCover"></div>
+
+    <div id="fadeElement"></div>
+
+    <div class="blackBackground" id="blackBackground"></div>
+
+    <div class="checkoutContainer" id="checkoutContainer">
+        <div class="receiptContainer">
+            <div class="receiptTitle">Receipt</div>
+
+            <div class="receiptHeader" id="receiptFeaturedPackageHeader">Featured Packages</div>
+            <div class="receiptItem" id="receiptFeaturedPackage1">First Timer ($225)</div>
+            <div class="receiptItem" id="receiptFeaturedPackage2">Total Disaster ($350)</div>
+            <div class="receiptItem" id="receiptFeaturedPackage3">Summer Special ($150)</div>
+
+            <div class="receiptHeader" id="receiptStandardPackagesHeader">Standard Packages</div>
+            <div class="receiptItem" id="receiptStandardPackage1">Basic Package ($100)</div>
+            <div class="receiptItem" id="receiptStandardPackage2">Premium Package ($50)</div>
+            <div class="receiptItem" id="receiptStandardPackage3">Ultimate Package ($50)</div>
+
+            <div class="receiptHeader" id="createYourOwnPackageHeader">Create Your Own Package</div>
+            <div class="receiptItem" id="createYourOwnPackage1">Exterior Wash and Dry ($50)</div>
+            <div class="receiptItem" id="createYourOwnPackage2">Tire and Rim Cleaning ($25)</div>
+            <div class="receiptItem" id="createYourOwnPackage3">Interior Vaccuming ($50)</div>
+            <div class="receiptItem" id="createYourOwnPackage4">Window Cleaning ($15)</div>
+            <div class="receiptItem" id="createYourOwnPackage5">Paint Correction ($100)</div>
+            <div class="receiptItem" id="createYourOwnPackage6">Interior Cleaning ($50)</div>
+            <div class="receiptItem" id="createYourOwnPackage7">Steam Cleaning ($75)</div>
+            <div class="receiptItem" id="createYourOwnPackage8">Clay-bar Treatment ($50)</div>
+            <div class="receiptItem" id="createYourOwnPackage9">Carpet Shampooing ($25)</div>
+            <div class="receiptItem" id="createYourOwnPackage10">Leather Conditioning ($25)</div>
+            <div class="receiptItem" id="createYourOwnPackage11">Ceramic Coating ($150)</div>
+
+            <div class="receiptHeader" id="receiptOrderTotal">Order Total</div>
+            <div class="receiptItem" id="receiptTotalPrice"></div>
+
+            <div class="receiptHeader" id="confirmYourOrderHeader">Confirm Your Order</div>
+            <div class="receiptItem" id="confirmYourOrderName">Name</div>
+            <input type="text" class="receiptInput" placeholder="First and Last" id="recieptNameInput">
+            <div class="receiptItem" id="confirmYourOrderPhone">Phone</div>
+            <input type="tel" class="receiptInput" placeholder="(555) 555-5555" id="recieptPhoneInput">
+            <div class="receiptItem" id="confirmYourOrderEmail">Email</div>
+            <input type="email" class="receiptInput" placeholder="example@example.com" id="recieptEmailInput">
+            <div class="receiptItem" id="confirmYourOrderAddress">Address</div>
+            <input type="text" class="receiptInput" placeholder="Street and City" id="recieptAddressInput">
+            <div>Keep in mind we come to you. We only provide our services in the following locations: <strong>New Albany, Clarksville, Jeffersonville, Floyd's Knobs, Greenville, Sellersburg, and Corydon.</strong> If you have any questions regarding your location feel free to contact us.</div>
+            <div class="submitOrderButton" id="receiptPlaceOrderButton" onclick="SendOrder(event)">Place Order</div>
+
+            <div class="receiptText">After placing your order we will contact you as soon as possible to schedule your car detailing service. Payment methods include <strong>Apple Pay, Cash, or Check.</strong></div>
+        </div>
+    </div>
+
+    <div class="backgroundImg"></div>
+
+    <div class="orderTopBar" id="orderTopBar">
+        <div class="homeIcon" id="homeIcon"></div>
+        <div class="orderTitle" id="orderTitle">Schedule a Detail Now</div>
+        <div class="topBarCheckoutButton" id="topBarCheckoutButton">Checkout</div>
+    </div>
+
+    <div class="topBarMarginTop">
+        <div class="orderHeader featuredPackagesHeader">Featured Packages</div>
+    </div>
+
+    <div class="featuredPackagesContainer" id="featuredPackagesContainer">
+
+        <div class="featuredPackage">
+            <div class="packageTop">
+                <div class="featuredPackageTitle">First Timer ($225)</div>
+                <div class="packageExpand" id="fpe1">+</div>
+            </div>
+            <div class="featuredPackageTextContainer" id="fpc1">
+                <div class="featuredPackageHeader">Package Contents</div>
+                <div class="packageItem underlineBold">Ultimate Package</div>
+                <div class="packageItem">Premium Package Contents Included</div>
+                <div class="packageItem">Clay-bar Treatment</div>
+                <div class="packageItem">Steam Cleaning</div>
+                <div class="packageItem">Leather Conditioning</div>
+                <div class="addPackageContainer">
+                    <div class="addPackagetext">Add Package</div>
+                    <input type="checkbox" class="checkbox2" id="featuredPackageCheckbox1">
+                </div>
+            </div>
+        </div>
+
+        <div class="featuredPackage">
+            <div class="packageTop">
+                <div class="featuredPackageTitle">Total Disaster ($350)</div>
+                <div class="packageExpand" id="fpe2">+</div>
+            </div>
+            <div class="featuredPackageTextContainer" id="fpc2">
+                <div class="featuredPackageHeader">Package Contents</div>
+                <div class="packageItem underlineBold">For cars that need extra care</div>
+                <div class="packageItem">This package includes</div>
+                <div class="packageItem">the <strong>Ultimate Package</strong> but</div>
+                <div class="packageItem">is recommended for cars that are</div>
+                <div class="packageItem">in need of a heavy detail</div>
+                <div class="addPackageContainer">
+                    <div class="addPackagetext">Add Package</div>
+                    <input type="checkbox" class="checkbox2" id="featuredPackageCheckbox2">
+                </div>
+            </div>
+        </div>
+
+        <div class="featuredPackage">
+            <div class="packageTop">
+                <div class="featuredPackageTitle">Summer Special ($150)</div>
+                <div class="packageExpand" id="fpe3">+</div>
+            </div>
+            <div class="featuredPackageTextContainer" id="fpc3">
+                <div class="featuredPackageHeader">Package Contents</div>
+                <div class="packageItem underlineBold">Premium Package</div>
+                <div class="packageItem">Basic Package Contents Included</div>
+                <div class="packageItem">Waxing and Polishing</div>
+                <div class="packageItem">Interior Cleaning</div>
+                <div class="packageItem">Carpet Shampooing</div>
+                <div class="addPackageContainer">
+                    <div class="addPackagetext">Add Package</div>
+                    <input type="checkbox" class="checkbox2" id="featuredPackageCheckbox3">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-------------------------->
+
+<div class="orderHeader">Standard Packages</div>
+
+    <div class="standardPackagesContainer" id="standardPackagesContainer">
+
+        <div class="standardPackage">
+            <div class="packageTop standardPackageTop">
+                <div class="featuredPackageTitle standardPackageTitle">Basic ($100)</div>
+                <div class="packageExpand" id="spe1">+</div>
+            </div>
+            <div class="featuredPackageTextContainer" id="spc1">
+                <div class="featuredPackageHeader">Package Contents</div>
+                <div class="packageItem">Exterior Wash and Dry</div>
+                <div class="packageItem">Tire and Rim Cleaning</div>
+                <div class="packageItem">Interior Vaccuming</div>
+                <div class="packageItem">Window Cleaning</div>
+                <div class="addPackageContainer">
+                    <div class="addPackagetext">Add Package</div>
+                    <input type="checkbox" class="checkbox2" id="standardPackageCheckbox1">
+                </div>
+            </div>
+        </div>
+
+        <div class="standardPackage">
+            <div class="packageTop standardPackageTop">
+                <div class="featuredPackageTitle standardPackageTitle">Premium ($175)</div>
+                <div class="packageExpand" id="spe2">+</div>
+            </div>
+            <div class="featuredPackageTextContainer" id="spc2">
+                <div class="featuredPackageHeader">Package Contents</div>
+                <div class="packageItem">Basic Package Contents Included</div>
+                <div class="packageItem">Waxing and Polishing</div>
+                <div class="packageItem">Interior Cleaning</div>
+                <div class="packageItem">Carpet Shampooing</div>
+                <div class="addPackageContainer">
+                    <div class="addPackagetext">Add Package</div>
+                    <input type="checkbox" class="checkbox2" id="standardPackageCheckbox2">
+                </div>
+            </div>
+        </div>
+
+        <div class="standardPackage">
+            <div class="packageTop standardPackageTop">
+                <div class="featuredPackageTitle standardPackageTitle">Ultimate ($275)</div>
+                <div class="packageExpand" id="spe3">+</div>
+            </div>
+            <div class="featuredPackageTextContainer" id="spc3">
+                <div class="featuredPackageHeader">Package Contents</div>
+                <div class="packageItem">Premium Package Contents Included</div>
+                <div class="packageItem">Clay-bar Treatment</div>
+                <div class="packageItem">Steam Cleaning</div>
+                <div class="packageItem">Leather Conditioning</div>
+                <div class="addPackageContainer">
+                    <div class="addPackagetext">Add Package</div>
+                    <input type="checkbox" class="checkbox2" id="standardPackageCheckbox3">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+<!---------------------->
+
+    <div class="orderHeader">Create Your Own Package</div>
+
+    <div class="createYourOwnPackageContentContainer" id="createYourOwnPackageContentContainer">
+
+        <div class="createYourOwnPackage">
+            <div class="createYourOwnPackageHeader">Exterior Wash and Dry ($50)</div>
+            <div class="createYourOwnPackageContent">
+                <input type="checkbox" class="checkbox" id="customPackageCheckbox1">
+                <div class="createYourOwnPackageText">Check this box if you like to add this item to your service</div>
+            </div>
+        </div>
+
+        <div class="createYourOwnPackage">
+            <div class="createYourOwnPackageHeader">Tire and Rim Cleaning ($25)</div>
+            <div class="createYourOwnPackageContent">
+                <input type="checkbox" class="checkbox" id="customPackageCheckbox2">
+                <div class="createYourOwnPackageText">Check this box if you like to add this item to your service</div>
+            </div>
+        </div>
+
+        <div class="createYourOwnPackage">
+            <div class="createYourOwnPackageHeader">Interior Vaccuming ($50)</div>
+            <div class="createYourOwnPackageContent">
+                <input type="checkbox" class="checkbox" id="customPackageCheckbox3">
+                <div class="createYourOwnPackageText">Check this box if you like to add this item to your service</div>
+            </div>
+        </div>
+
+        <div class="createYourOwnPackage">
+            <div class="createYourOwnPackageHeader">Window Cleaning ($15)</div>
+            <div class="createYourOwnPackageContent">
+                <input type="checkbox" class="checkbox" id="customPackageCheckbox4">
+                <div class="createYourOwnPackageText">Check this box if you like to add this item to your service</div>
+            </div>
+        </div>
+
+        <div class="createYourOwnPackage">
+            <div class="createYourOwnPackageHeader">Paint Correction ($100)</div>
+            <div class="createYourOwnPackageContent">
+                <input type="checkbox" class="checkbox" id="customPackageCheckbox5">
+                <div class="createYourOwnPackageText">Check this box if you like to add this item to your service</div>
+            </div>
+        </div>
+
+        <div class="createYourOwnPackage">
+            <div class="createYourOwnPackageHeader">Interior Cleaning ($50)</div>
+            <div class="createYourOwnPackageContent">
+                <input type="checkbox" class="checkbox" id="customPackageCheckbox6">
+                <div class="createYourOwnPackageText">Check this box if you like to add this item to your service</div>
+            </div>
+        </div>
+
+        <div class="createYourOwnPackage">
+            <div class="createYourOwnPackageHeader">Steam Cleaning ($75)</div>
+            <div class="createYourOwnPackageContent">
+                <input type="checkbox" class="checkbox" id="customPackageCheckbox7">
+                <div class="createYourOwnPackageText">Check this box if you like to add this item to your service</div>
+            </div>
+        </div>
+
+        <div class="createYourOwnPackage">
+            <div class="createYourOwnPackageHeader">Clay-bar Treatment ($50)</div>
+            <div class="createYourOwnPackageContent">
+                <input type="checkbox" class="checkbox" id="customPackageCheckbox8">
+                <div class="createYourOwnPackageText">Check this box if you like to add this item to your service</div>
+            </div>
+        </div>
+
+        <div class="createYourOwnPackage">
+            <div class="createYourOwnPackageHeader">Carpet Shampooing ($25)</div>
+            <div class="createYourOwnPackageContent">
+                <input type="checkbox" class="checkbox" id="customPackageCheckbox9">
+                <div class="createYourOwnPackageText">Check this box if you like to add this item to your service</div>
+            </div>
+        </div>
+
+        <div class="createYourOwnPackage">
+            <div class="createYourOwnPackageHeader">Leather Conditioning ($25)</div>
+            <div class="createYourOwnPackageContent">
+                <input type="checkbox" class="checkbox" id="customPackageCheckbox10">
+                <div class="createYourOwnPackageText">Check this box if you like to add this item to your service</div>
+            </div>
+        </div>
+
+        <div class="createYourOwnPackage">
+            <div class="createYourOwnPackageHeader">Ceramic Coating ($150)</div>
+            <div class="createYourOwnPackageContent">
+                <input type="checkbox" class="checkbox" id="customPackageCheckbox11">
+                <div class="createYourOwnPackageText">Check this box if you like to add this item to your service</div>
+            </div>
+        </div>
+
+    </div>
+
+<!---------------------->
+
+<form id="dataForm" action="https://script.google.com/macros/s/AKfycbzWV0gk5sFB9DXJ7f9E6FcOrFtydWK2Zxkoe9tHAc7ZAzJ9T9_s0qpGEavM6_qO-4Us/exec" method="post">
+        
+    <input type="text" id="formName" name="Name">
+    <input type="text" id="formPhone" name="Phone">
+    <input type="text" id="formEmail" name="Email">
+    <input type="text" id="formAddress" name="Address">
+
+    <input type="text" id="formFirstTimer" name="FirstTimer">
+    <input type="text" id="formTotalDisastser" name="TotalDisaster">
+    <input type="text" id="formSummerSpecial" name="SummerSpecial">
+
+    <input type="text" id="formBasic" name="Basic">
+    <input type="text" id="formPremium" name="Premium">
+    <input type="text" id="formUltimate" name="Ultimate">
+
+    <input type="text" id="formCreateYourOwnPackage1" name="NameCreateYourOwnPackage1">
+    <input type="text" id="formCreateYourOwnPackage2" name="NameCreateYourOwnPackage2">
+    <input type="text" id="formCreateYourOwnPackage3" name="NameCreateYourOwnPackage3">
+    <input type="text" id="formCreateYourOwnPackage4" name="NameCreateYourOwnPackage4">
+    <input type="text" id="formCreateYourOwnPackage5" name="NameCreateYourOwnPackage5">
+    <input type="text" id="formCreateYourOwnPackage6" name="NameCreateYourOwnPackage6">
+    <input type="text" id="formCreateYourOwnPackage7" name="NameCreateYourOwnPackage7">
+    <input type="text" id="formCreateYourOwnPackage8" name="NameCreateYourOwnPackage8">
+    <input type="text" id="formCreateYourOwnPackage9" name="NameCreateYourOwnPackage9">
+    <input type="text" id="formCreateYourOwnPackage10" name="NameCreateYourOwnPackage10">
+    <input type="text" id="formCreateYourOwnPackage11" name="NameCreateYourOwnPackage11">
+
+    <input type="text" id="formTotal" name="NameTotal">
+    <input type="text" id="formBlakesCommision" name="BlakesCommision">
+
+</form>
+
+<!---------------------->
+
+</body>
+    <script src="scheduleExpand.js"></script>
+    <script src="orderAPI.js"></script>
+    <script src="screenFade.js"></script>
+</html>	
+

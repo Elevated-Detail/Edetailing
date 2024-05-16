@@ -1,0 +1,459 @@
+body{
+    text-align: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    cursor: default;
+}
+
+.orderTopBar{
+    position: fixed;
+    z-index: 999;
+    background-color: rgb(0, 0, 0, 0);
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.2s ease;
+    display: flex;
+    justify-content: space-between;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.homeIcon{
+    background-image: url('homeIcon.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    background-color: #b73a39;
+    border-radius: 50px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin: 10px 30px;
+    aspect-ratio: 1/1;
+}
+.homeIcon:hover{
+    background-color: white;
+}
+
+.topBarCheckoutButton{
+    background-color: #b73a39;
+    color: white;
+    font-size: 25px;
+    width: fit-content;
+    height: fit-content;
+    margin: 25px 30px 10px 30px;
+    border-radius: 20px;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.topBarCheckoutButton:hover{
+    background-color: white;
+    color: #b73a39;
+}
+
+.topBarMarginTop{
+    margin-top: 0px;
+    padding-top: 70px;
+}
+
+.backgroundImg{
+    background-image: url('orderBackgroundImg.jpg');
+    background-color: #919191;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    position: fixed;
+    z-index: -1;
+}
+
+.orderTitle{
+    color: white;
+    font-size: 50px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: font-size 0.2s ease;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.orderHeader{
+    margin-top: 30px;
+    color: white;
+    font-size: 40px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: font-size 0.2s ease;
+    background-color: rgb(0, 0, 0, 0.7);
+    margin: 30px auto 0 auto;
+    border-top: 1px solid white;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+.featuredPackagesContainer{
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid white;
+    background-color: rgb(0, 0, 0, 0.7);
+    padding: 10px 10px 30px 10px;
+}
+
+.featuredPackage{
+    width: 300px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-shadow: 0 0 10px 5px #919191;
+    border-radius: 20px;
+}
+
+.featuredPackageTitle{
+    background-color: #963232;
+    color: white;
+    font-size: 29px;
+    border-radius: 20px 20px 0 0;
+    padding: 5px 0;
+}
+
+.standardPackageTitle{
+    background-color: #b73a39;
+}
+
+.standardPackageTop{
+    background-color: rgb(75, 75, 75, 1) !important;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.featuredPackageHeader{
+    font-size: 20px;
+    background-color: white;
+    padding: 5px;
+}
+
+.featuredPackageTextContainer{
+    background-color: white;
+    padding: 5px 5px 15px 5px;
+    border-radius: 0 0 20px 20px;
+}
+
+.packageTop{
+    display: block;
+}
+
+.packageExpand{
+    display: none;
+}
+
+.addPackageContainer{
+    display: flex;
+    width: fit-content;
+    margin: 30px auto 0 auto;
+}
+
+.addPackagetext{
+    font-size: 20px;
+}
+
+.addPackageButton{
+    background-color: #b73a39;
+    margin-left: 10px;
+    color: white;
+    font-size: 30px;
+    border-radius: 100px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3px;
+    cursor: pointer;
+    border: 1px solid #b73a39;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.addPackageButtonText{
+    margin-bottom: 5px;
+}
+
+.addPackageButton:hover{
+    color: #b73a39;
+    background-color: white;
+}
+
+/*----------------------*/
+
+.standardPackagesContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: rgb(0, 0, 0, 0.7);
+    border-bottom: 1px solid white;
+    padding-bottom: 20px;
+}
+
+.standardPackage{
+    width: 300px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+
+/*----------------------*/
+
+.createYourOwnPackageContentContainer{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(0, 0, 0, 0.7);
+    justify-content: center;
+}
+
+.createYourOwnPackage{
+    width: 300px;
+    margin: 30px;
+}
+
+.createYourOwnPackageHeader{
+    background-color: rgb(75, 75, 75, 1);
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 10px 10px 0 0;
+}
+
+.createYourOwnPackageContent{
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+    padding: 5px;
+}
+
+.checkbox{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.createYourOwnPackageText{
+    font-size: 12px;
+}
+
+.checkbox2{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+/*----------------------*/
+
+.blackBackground{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    position: fixed;
+    z-index: 0;
+    display: none;
+}
+
+.checkoutContainer{
+    width: 100%;
+    height: fit-content;
+    background-color: black;
+    position: absolute;
+    display: none;
+    justify-content: center;
+}
+
+.receiptContainer{
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    height: fit-content;
+    margin: 20vh 30px 60px 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.receiptTitle{
+    font-size: 30px;
+    padding: 5px;
+}
+
+.receiptHeader{
+    border-top: 1px dotted black;
+    font-size: 25px;
+    padding: 5px;
+    display: none;
+}
+
+.receiptItem{
+    padding: 5px;
+    font-size: 20px;
+    display: none;
+}
+
+.submitOrderButton{
+    background-color: #b73a39;
+    color: white;
+    font-size: 25px;
+    border-radius: 20px;
+    padding: 5px 8px;
+    width: fit-content;
+    margin: 20px auto 10px auto;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.submitOrderButton:hover{
+    background-color: #989898ff;
+}
+
+.receiptText{
+    margin-bottom: 20px;
+}
+
+#dataForm{
+    visibility: hidden;
+    position: fixed;
+}
+
+.underlineBold{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/*----------------------*/
+
+@media only screen and (max-width: 580px){
+    .topBarCheckoutButton{
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    .homeIcon{
+        height: 35px;
+        width: 35px;
+    }
+    .orderTitle{
+        font-size: 25px;
+    }
+    .orderTitle{
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 575.98px){
+    .orderHeader{
+        font-size: 30px;
+    }
+    .topBarCheckoutButton{
+        font-size: 20px;
+    }
+    
+}
+
+@media only screen and (max-width: 950px){
+    .featuredPackagesContainer{
+        display: block;
+        padding: 15px 0 0 0;
+    }
+    .featuredPackage{
+        box-shadow: none;
+        border-top: 1px solid gray;
+        border-bottom: 1px solid black;
+        border-radius: 0;
+        width: 100%;
+    }
+    .featuredPackageTitle{
+        border-radius: 0;
+        margin-left: 30px;
+        margin-top: 5px;
+    }
+    .featuredPackageTextContainer{
+        display: none;
+        border-radius: 0;
+    }
+
+    .packageExpand{
+        display: block;
+        color: white;
+        margin-left: auto;
+        font-size: 40px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        margin-right: 30px;
+    }
+    .packageTop{
+        display: flex;
+        width: 100%;
+        background-color: #963232;
+    }
+    
+    .createYourOwnPackageContentContainer{
+        display: block;
+    }
+    .createYourOwnPackage{
+        margin: 0;
+        width: 100%;
+        border-bottom: 1px solid black;
+        border-top: 1px solid grey;
+        display: flex;
+        background-color: #b73a39;
+    }
+    .createYourOwnPackageHeader{
+        border-radius: 0;
+        padding-top: 7px;
+    }
+    .createYourOwnPackageContent{
+        border-radius: 0;
+    }
+    .createYourOwnPackageText{
+        display: none;
+    }
+    .createYourOwnPackageContent{
+        background-color: #b73a39;
+        margin-left: auto;
+        margin-right: 20px;
+    }
+    .orderTitle{
+        font-size: 30px;
+    }
+
+    .standardPackagesContainer{
+        display: block;
+        margin-top: 30px;
+        padding-bottom: 0;
+    }
+    .standardPackage{
+        width: 100%;
+        border-top: 1px solid grey;
+        border-bottom: 1px solid black;
+        margin: 0;
+    }
+    .standardPackagesContainer{
+        margin: 0;
+    }
+    .standardPackageTop{
+        border-radius: 0;
+        background-color: #b73a39 !important;
+    }
+    .featuredPackagesHeader{
+        padding-bottom: 0;
+    }
+    .createYourOwnPackage{
+        background-color: rgb(75, 75, 75, 1);
+    }
+    .createYourOwnPackageContent{
+        background-color: rgb(75, 75, 75, 1);
+    }
+}
+
+@media only screen and (min-width: 950px){
+    .featuredPackagesContainer2{
+        display: none;
+    }
+    .standardPackagesContainer2{
+        display: none;
+    }
+    .featuredPackageTextContainer{
+        display: block;
+    }
+}

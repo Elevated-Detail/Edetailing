@@ -1,0 +1,212 @@
+<!-- cd "C:\Users\bmrichardson\Desktop\Coding 23-24\Web Developement\API Project"
+C:\Python385\python.exe -m http.server -->
+<!-- http://localhost:8000/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="homeStyle.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="aboutStyle.css">
+    <link rel="stylesheet" href="servicesStyle.css">
+    <link rel="stylesheet" href="contactStyle.css">
+</head>
+<body>
+
+    <div id="fadeElement"></div>
+    <a href="#top"><div id="watermarkLogo"></div></a>
+
+    <div class="topFade"></div>
+    <div class="bottomFade"></div>
+
+    <div class="topBar" id="topBar">
+        <a href="#top">
+            <div class="topBarItemContainer">
+                <div class="topBarItem">Home</div>
+            </div>
+        </a>
+        <a href="#servicesContainer">
+            <div class="topBarItemContainer">
+                <div class="topBarItem">Services</div>
+            </div>
+        </a>
+        <a href="#aboutContainer">
+            <div class="topBarItemContainer">
+                <div class="topBarItem">About</div>
+            </div>
+        </a>
+        <a href="#contactContainer">
+            <div class="topBarItemContainer">
+                <div class="topBarItem">Contact</div>
+            </div>
+        </a>
+    </div>
+    
+    <div class="homeContainer"  id="top">
+        <div class="homeContainerContent">
+            <div class="ElevatedDetailLogo"></div>
+            <div class="scheduleNowButton" id="scheduleNowButton">Schedule a Detail Now</div>
+        </div>
+    </div>
+
+    <div class="containerBottomBorder"></div>
+
+    <div class="servicesContainer" id="servicesContainer">
+        <div class="servicesContentContainer">
+            <div class="center">
+                <div class="title servicesTitle">Services</div>
+            </div>
+            <div class="center">
+                <div class="featuredPackagesText servicesHeader">Featured Packages</div>
+            </div>
+
+            <div class="packagesContainer">
+
+                <div class="package" id="featuredPackage1">
+                    <div class="packageTitle">First Timer ($225)</div>
+                    <div class="packageText">
+                        <div class="packageDescription">Indulge in automotive luxury with our First Timer Package, designed for those seeking an unforgettable introduction to car detailing. Experience a meticulous blend of precision and care, leaving your vehicle refreshed and radiant like never before.</div>
+                        <div class="packageHeader">Package Contents</div>
+                        <div class="listOfServices">
+                            <div class="packageService underlineBold">Ultimate Package</div>
+                            <div class="packageService">Premium Package Contents Included</div>
+                            <div class="packageService">Clay-bar Treatment</div>
+                            <div class="packageService">Steam Cleaning</div>
+                            <div class="packageService">Leather Conditioning</div>
+                        </div>
+                        <div class="packageScheduleButton" id="packageScheduleButton1">Schedule Now</div>
+                    </div>
+                </div>
+
+                <div class="package" id="featuredPackage2">
+                    <div class="packageTitle">Total Disaster ($350)</div>
+                    <div class="packageText">
+                        <div class="packageDescription">Revive your vehicle from the brink with our Total Disaster Package. From mud-caked exteriors to cluttered interiors, our expert team tackles every challenge with precision. Experience the satisfaction of seeing your car emerge pristine and refreshed. Say goodbye to chaos, hello to automotive excellence.</div>
+                        <div class="packageHeader">Package Contents</div>
+                        <div class="listOfServices">
+                            <div class="packageService underlineBold">For cars that need extra care</div>
+                            <div class="packageService">This package includes</div>
+                            <div class="packageService">the <strong>Ultimate Package</strong> but</div>
+                            <div class="packageService">is recommended for cars that are</div>
+                            <div class="packageService">in need of a heavy detail.</div>
+                        </div>
+                        <div class="packageScheduleButton" id="packageScheduleButton2">Schedule Now</div>
+                    </div>
+                </div>
+
+                <div class="package" id="featuredPackage3">
+                    <div class="packageTitle">Summer Special ($150)</div>
+                    <div class="packageText">
+                        <div class="packageDescription">Elevate your summer ride with our Summer Special Package. From sun-soaked exteriors to sand-strewn interiors, we'll restore your car's shine with expert precision. Treat your vehicle to the luxury it deserves with our seasonal offer.</div>
+                        <div class="packageHeader">Package Contents</div>
+                        <div class="listOfServices">
+                            <div class="packageService underlineBold">Premium Package</div>
+                            <div class="packageService">Basic Package Contents Included</div>
+                            <div class="packageService">Waxing and Polishing</div>
+                            <div class="packageService">Interior Cleaning</div>
+                            <div class="packageService">Carpet Shampooing</div>
+                        </div>
+                        <div class="packageScheduleButton" id="packageScheduleButton3">Schedule Now</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="packageScrollContainer">
+                <div class="leftArrow" id="leftArrow"></div>
+                <div class="scrollDot" id="scrollDot1">.</div>
+                <div class="scrollDot" id="scrollDot2">.</div>
+                <div class="scrollDot" id="scrollDot3">.</div>
+                <div class="rightArrow" id="rightArrow"></div>
+            </div>
+
+            <div class="viewOtherPackagesButton" id="viewOtherPackagesButton">View Other Packages</div>
+
+        </div>
+        <div class="servicesContainerFade"></div>
+    </div>
+
+    <div class="containerBottomBorder"></div>
+
+    <div class="aboutContainer" id="aboutContainer">
+
+        <div class="aboutTopFade"></div>
+
+        <div class="aboutContentContainer">
+            <div class="center">
+                <div class="title">About</div>
+            <div class="center">
+                <div class="aboutText">"Elevated Detail is more than a car detailing service; we're passionate automotive enthusiasts committed to redefining vehicle care. With careful attention to detail and personalized service, we elevate your driving experience. From restoring classic cars to protecting modern vehicles, our tailored solutions ensure your investment shines. Trusted by enthusiasts across Southern Indiana, Elevated Detail promises brilliance and beauty for your ride."</div>
+            </div>
+
+            <div class="teamContainer">
+                <div class="memberContainer">
+                    <div class="memberImg" id="member1Img"></div>
+                    <div class="memberName">Wyatt Moore</div>
+                    <div class="memberText">"My name is Wyatt Moore, co-CEO and co-founder of Elevated Detail. I currently attend Providence High School as well as Prosser Career Education Center where I am a part of the automotive group. Beyond the world of cars, I've been a member of the SIGS Sportsplex men's gymnastics team for the past decade. My passion for both automotive craftsmanship and gymnastics reflects the commitment and attention to detail that define the essence of Elevated Detail."</div>
+                </div>
+                <div class="memberContainer">
+                    <div class="memberImg" id="member2Img"></div>
+                    <div class="memberName">Jonathan Knoebel</div>
+                    <div class="memberText">"My name is Jonathan Knoebel, co-CEO and co-founder of Elevated Detail. I currently attend Borden High School as well as Prosser Career Education Center where I am a part of the CNA (Certified Nursing Assistant) program. Beyond the world of cars, I've been a member of Borden's track and cross country team all throughout highschool. My commitment and dedication to my academics and sports shines through while providing our premium Elevated Detail services."</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="containerBottomBorder"></div>
+
+    <div class="contactContainer" id="contactContainer">
+
+        <div class="aboutTopFade"></div>
+
+            <div class="contactContentContainer">
+
+                <div class="center">
+                    <div class="title contactTitle">Contact Info</div>
+                <div class="center">
+
+                <div class="contactInfoSplitContainer">
+                    <div class="ContactSplitbox">
+                        <div class="contactLogoImg phoneLogo"></div>
+                        <div class="contactInfoText">Phone</div>
+                        <div class="phoneNumberText">(502) 791-0995</div>
+                        <div class="phoneNumberNameText">Wyatt Moore</div>
+                        <div class="contactButton" id="textNowButton">Text Now</div>
+                        <div class="phoneNumberText">(502) 216-5809</div>
+                        <div class="phoneNumberNameText">Johathan Knoebel</div>
+                        <div class="contactButton" id="textNowButton2">Text Now</div>
+                    </div>
+                    <div class="ContactSplitbox">
+                        <div class="contactLogoImg emailLogo"></div>
+                        <div class="contactInfoText">Email</div>
+                        <div class="phoneNumberText emailText" >elevateddetail8@gmail.com</div>
+                        <div class="contactButton" id="emailNowButton">Email Now</div>
+                    </div>
+                </div>
+
+                <div class="contactSocailMediaContainer">
+                    <div class="socailogo InstaLogo" id="socialMediaButton1"></div>
+                    <div class="socailogo FacebookLogo" id="socialMediaButton2"></div>
+                    <div class="socailogo TikTokLogo" id="socialMediaButton3"></div>
+                    <div class="socailogo YoutubeLogo" id="socialMediaButton4"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+<script src="homeLoad.js"></script>
+<script src="homeParalax.js"></script>
+<script src="packagesScroll.js"></script>
+<script src="contactLink.js"></script>
+<script src="screenFade.js"></script>
+</html>
